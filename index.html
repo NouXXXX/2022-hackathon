@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
   <body>
     <div class="header">
@@ -30,7 +31,9 @@
         <div class="card">
           <h2>오늘 쓰레기 배출량</h2>
           <h5>2022년 07년 14일</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
+          <div class="chart">
+            <canvas id="monthly-trash"></canvas>
+          </div>
           <p>소제목</p>
           <p>내용</p>
         </div>
@@ -57,5 +60,19 @@
     <div class="footer">
       <h2>Made by 똘기</h2>
     </div>
+    <script>
+      let monthlyTrash = document.getElementById("monthly-trash");
+
+      let lineChart = new Chart(monthlyTrash, {
+          type : 'line',
+          data : {
+              labels : ["", "2022-03", "2022-04", "2022-05", "2022-06", "2022-07", "2022-08", "2022-09", "2022-10", "2022-11", ""],
+              datasets : [{
+                  label : "우리 동네 월간 쓰레기 배출량",
+                  data: [0, 10, 80, 50, 100, 60, 90, 40, 30, 70, 0]
+              }]
+          }
+      })
+    </script>
   </body>
 </html>

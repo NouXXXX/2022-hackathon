@@ -111,3 +111,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.chart {
+  height: 300px;
+  width: 600px;
+  margin: auto;
+}
