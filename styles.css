@@ -13,7 +13,7 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  background: #c7ebca;
+  background: #c7ead7;
 }
 
 .header h1 {
@@ -24,16 +24,6 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #ebf3e6;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 50px;
-  text-decoration: none;
 }
 
 /* Change color on hover */
