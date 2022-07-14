@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Socket Tester</title>
+
+    <link rel="stylesheet" href="" crossorigin="anonymous">
+
+    <style>
+      body{
+        background: #c7ead7 ;
+      }
+    #messages { 
+      list-style-type: none; 
+      margin: 0px auto; 
+      padding: 0; 
+      border : 1px solid;
+      width : 100%;
+      height: 700px;
+      overflow: auto;
+    }
+    #messages li { 
+      padding: 20px 10px; 
+    }
+    h1{
+      text-align: center;
+    }
+    li{
+      font-size: 1em;
+      border-bottom: 1px solid;
+      /* text-decoration: underline; */
+      margin : 20px;
+    }
+    form.example input[type=text] {
+      padding: 15px;
+      font-size: 17px;
+      border: 1px solid grey;
+      margin: auto;
+      display: block;
+      width: 772px;
+      background: #f1f1f1;
+    }
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none; /* Prevent double borders */
+      cursor: pointer;
+    }
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    /* Clear floats */
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .card-footer{
+      /*display: grid;
+      place-items: center;*/
+    }
+    .mb-3 {
+      margin: auto;
+      width: 100%;
+      display: flex;
+    }
+    @media only screen and (min-width: 800px){
+      #messages { 
+        width:800px;
+      }
+      .mb-3{
+        width: 803px;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+
+      <!-- 대기실 -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h1 style="font-size: 3em;">chat</h1>
+          </div>
+          <div class="card-footer">
+            <ul id="messages"></ul>
+            <form action="" class="example">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="m" placeholder="chat.."autocomplete="off" />
+                <button id="msg-send" class="btn btn-primary" placeholder="message">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 방선택 -->
+      <div class="col-lg-8"></div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <div class="box">
+    <script>
+      $(() => {
+        /** Socket Starts **/
+        const socket = io();
+        
+        // 클라이언트에서 reuqest_message 프로토콜로 id='m' 의 input 값을 보낸다.
+        $('#msg-send').click(() => {
+          socket.emit('request_message', $('#m').val());
+          $('#m').val('');
+          return false; 
+        });
+
+        socket.on('response_message', (res) => {
+          $('#messages').prepend($('<li>').text(res));
+        });
+
+      });
+    </script>
+    
+    </div>
+  </body>
+</html>
