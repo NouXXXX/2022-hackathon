@@ -13,17 +13,24 @@
     <div class="row">
       <div class="leftcolumn">
         <div class="card">
-          <h2>오늘 이슈</h2>
-          <h5>2022년 07월 14일</h5>
+          <h1>오늘의 이슈</h1>
+          <h3>2022년 07월 14일 (대기오염)</h3>
           <video autoplay muted loop width="1352px" height="560.84px">
             <source src="./videos/company.mp4" type="video/mp4" />
           </video>
-          <p>소제목</p>
-          <p>대충 내용들</p>
+          <p>공장 굴뚝에서 배출되는 7가지</p>
+          <p><a href="https://ko.wikipedia.org/wiki/%ED%99%A9%EC%82%B0">- 황산화물</a> <br />
+            <a href="https://ko.wikipedia.org/wiki/%EC%A7%88%EC%86%8C_%EC%82%B0%ED%99%94%EB%AC%BC">- 질소산화물</a> <br />
+            <a href="https://ko.wikipedia.org/wiki/%ED%94%8C%EB%A3%A8%EC%98%A4%EB%A6%B0%ED%99%94_%EC%88%98%EC%86%8C">- 불화수소</a> <br />
+            <a href="https://ko.wikipedia.org/wiki/%EC%9D%BC%EC%82%B0%ED%99%94_%ED%83%84%EC%86%8C">- 일산화 탄소</a> <br />
+            <a href="https://ko.wikipedia.org/wiki/%EC%95%94%EB%AA%A8%EB%8B%88%EC%95%84">- 암모니아</a> <br />
+            <a href="https://ko.wikipedia.org/wiki/%EC%97%BC%ED%99%94_%EC%88%98%EC%86%8C">- 염화수소</a> <br />
+            <a href="https://ko.wikipedia.org/wiki/%EB%A8%BC%EC%A7%80">- 먼지</a>
+        </p>
         </div>
         <div class="card">
-          <h2>오늘 쓰레기 배출량</h2>
-          <h5>2022년 07년 14일</h5>
+          <h2>월간 쓰레기 배출량</h2>
+          <h3>2022년 07년 14일</h5>
           <div class="chart">
             <canvas id="monthly-trash"></canvas>
           </div>
@@ -33,19 +40,25 @@
       </div>
       <div class="rightcolumn">
         <div class="card">
-          <h2>환경에 관련된 뉴스</h2>
-          <div class="fakeimg" style="height: 100px">Image</div>
-          <p>관련된 기사 및 사회 운동</p>
+          <h2>이슈와 관련된 뉴스</h2>
+          <div className="news">
+            <a href="https://news.kbs.co.kr/news/view.do?ncd=5509068&ref=A">
+              <img
+                src="https://news.kbs.co.kr/data/news/title_image/newsmp4/chuncheon/newsplaza/2022/07/14/120_5509068.jpg"
+              />
+            </a>
+          </div>
+          <p>강원도, 중소 사업장 대상 환경기술 지원</p>
         </div>
         <div class="card">
-          <h3>오늘의 주요 기사</h3>
-          <div class="fakeimg"><p>Image</p></div>
-          <div class="fakeimg"><p>Image</p></div>
-          <div class="fakeimg"><p>Image</p></div>
+          <h3>공지 글 및 게시글</h3><a href="Notice/index.html">
+          <div class="announcement"><p>8월 10일 대청소</p></div>
+          <div class="announcement"><p>8월 15일 종이배 마을 대회</p></div>
+          <div class="announcement"><p>8월 20일 나무 심기 원정</p></div></a>
         </div>
         <div class="card">
-          <h3>사회 봉사 참여하기</h3>
-          <p>참여링크</p>
+          <h3>동네 커뮤니티 참여하기</h3>
+          <a href="http://localhost:3000/"><p className="joinlink">참여링크</p></a>
         </div>
       </div>
     </div>
@@ -53,33 +66,6 @@
     <div class="footer">
       <h2>Made by 똘기</h2>
     </div>
-    <script>
-      let monthlyTrash = document.getElementById("monthly-trash");
-
-      let lineChart = new Chart(monthlyTrash, {
-        type: "line",
-        data: {
-          labels: [
-            "",
-            "2022-03",
-            "2022-04",
-            "2022-05",
-            "2022-06",
-            "2022-07",
-            "2022-08",
-            "2022-09",
-            "2022-10",
-            "2022-11",
-            "",
-          ],
-          datasets: [
-            {
-              label: "우리 동네 월간 쓰레기 배출량",
-              data: [0, 10, 80, 50, 100, 60, 90, 40, 30, 70, 0],
-            },
-          ],
-        },
-      });
-    </script>
+    <div className="graph-script"><script src="./graph.js"></script></div>
   </body>
 </html>

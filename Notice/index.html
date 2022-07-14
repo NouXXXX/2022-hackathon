@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <a href="../index.html"><h1>우리 동네 <br />커뮤니티</h1>
+      <p>지속 가능한 동네, 미래를 생각하는 동네</p></a>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>게시판</h2>
+          <main class="main__container">
+            <div class="board__container">
+              <table class="board">
+                <thead class="board__table-head">
+                  <tr class="board__titles">
+                    <th class="board__column">번호</th>
+                    <th class="board__column">제목</th>
+                    <th class="board__column">작성자</th>
+                    <th class="board__column">작성일</th>
+                    <th class="board__column">조회</th>
+                  </tr>
+                </thead>
+                <tbody class="board__contents" id="board-body"></tbody>
+              </table>
+              <div class="board__index-container" id="index-container"></div>
+            </div>
+            <div class="contents__container"></div>
+            <div class="editor__container">
+              <form action="#" class="editor__form" id="editor-form">
+                <input type="text" class="editor__title-input" id="editor-title-input" placeholder="제목" />
+                <input type="text" class="editor__content-input" id="editor-content-input" placeholder="내용" />
+                <button class="editor__btn" id="editor-submit-btn">작성 완료</button>
+              </form>
+            </div>
+          </main>
+        </div>
+        <div class="card">
+          <h2>월간 쓰레기 배출량</h2>
+          <h3>2022년 07년 14일</h5>
+          <div class="chart">
+            <canvas id="monthly-trash"></canvas>
+          </div>
+          <p>소제목</p>
+          <p>내용</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>이슈와 관련된 뉴스</h2>
+          <div className="news">
+            <a href="https://news.kbs.co.kr/news/view.do?ncd=5509068&ref=A">
+              <img
+                src="https://news.kbs.co.kr/data/news/title_image/newsmp4/chuncheon/newsplaza/2022/07/14/120_5509068.jpg"
+              />
+            </a>
+          </div>
+          <p>강원도, 중소 사업장 대상 환경기술 지원</p>
+        </div>
+        <div class="card">
+          <h3>공지 글 및 게시글</h3>
+          <div class="announcement"><p>8월 10일 대청소</p></div>
+          <div class="announcement"><p>8월 15일 종이배 마을 대회</p></div>
+          <div class="announcement"><p>8월 20일 나무 심기 원정</p></div>
+        </div>
+        <div class="card">
+          <h3>동네 커뮤니티 참여하기</h3>
+          <a href="http://localhost:3000/"><p className="joinlink">참여링크</p></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2>Made by 똘기</h2>
+    </div>
+    <div className="graph-script"><script src="../graph.js"></script></div>
+  </body>
+</html>

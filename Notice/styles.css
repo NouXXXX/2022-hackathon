@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+  background-image: url("https://i.pinimg.com/736x/4d/45/d3/4d45d338451889a19729da297c2e6ef5.jpg");
+}
+
+img {
+  width: 100%;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #c7ead7;
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 색상 제거 */
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* vidieo */
+video {
+  width: 100%;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card p {
+  font-weight: bold;
+  font-size: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ebf3e6;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.chart {
+  height: 300px;
+  width: 600px;
+  margin: auto;
+}
+
+.graph-script {
+  width: 100%;
+}
+
+main {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+  background-color: #ffff;
+  font-size: large;
+}
+
+h2 {
+  text-align: center;
+}
+
+.main__container {
+  height: 700px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.board__container,
+.contents__container,
+.editor__container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.board__container {
+  background-color: #ddd;
+  margin: 10px 0px 0px 0px;
+  height: 220px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.contents__container {
+  background-color: #ddd;
+  margin: 10px 0px;
+  height: 220px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.editor__container {
+  background-color: #ddd;
+  margin: 10px 0px;
+  height: 220px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Board Lists */
+.board {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.board__index-container {
+  position: absolute;
+  bottom: 10px;
+}
+
+.board__index-link {
+  all: unset;
+  margin-right: 5px;
+}
+
+.board__index-link:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+/* Contents */
+.contents__titles {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.contents__column {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contents__content {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+/* Editor */
+.editor__form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  all: unset;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-width: 3px;
+}
+
+.editor__title-input,
+.editor__content-input {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.editor__content-input {
+  height: 100px;
+}
+
+.editor__btn {
+  all: unset;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border-width: 2px;
+  padding: 5px 10px;
+}
+
+button:active {
+  transform: scale(0.93);
+}
