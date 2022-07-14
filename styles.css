@@ -46,6 +46,11 @@ body {
   padding-left: 20px;
 }
 
+/* vidieo */
+video {
+  width: 100%;
+}
+
 /* Fake image */
 .fakeimg {
   background-color: #aaa;
