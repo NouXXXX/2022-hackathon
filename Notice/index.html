@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Board with Local Storage</title>
+  <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="header">
+    <h1>우리 동네 <br />커뮤니티</h1>
+    <p>지속 가능한 동네, 미래를 생각하는 동네</p>
+  </div>
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>게시판</h2>
+        <main class="main__container">
+          <div class="board__container">
+            <table class="board">
+              <thead class="board__table-head">
+                <tr class="board__titles">
+                  <th class="board__column">번호</th>
+                  <th class="board__column">제목</th>
+                  <th class="board__column">작성자</th>
+                  <th class="board__column">작성일</th>
+                  <th class="board__column">조회</th>
+                </tr>
+              </thead>
+              <tbody class="board__contents" id="board-body"></tbody>
+            </table>
+            <div class="board__index-container" id="index-container"></div>
+          </div>
+          <div class="contents__container"></div>
+          <div class="editor__container">
+            <form action="#" class="editor__form" id="editor-form">
+              <input type="text" class="editor__title-input" id="editor-title-input" placeholder="제목" />
+              <input type="text" class="editor__content-input" id="editor-content-input" placeholder="내용" />
+              <button class="editor__btn" id="editor-submit-btn">작성 완료</button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>환경에 관련된 뉴스</h2>
+        <div class="fakeimg" style="height: 100px">Image</div>
+        <p>관련된 기사 및 사회 운동</p>
+      </div>
+      <div class="card">
+        <h3>오늘의 주요 기사</h3>
+        <div class="fakeimg">
+          <p>Image</p>
+        </div>
+        <div class="fakeimg">
+          <p>Image</p>
+        </div>
+        <div class="fakeimg">
+          <p>Image</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>사회 봉사 참여하기</h3>
+        <p>참여링크</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <h2>Made by 똘기</h2>
+  </div>
+  <script src="index.js"> </script>
+</body>
+
+</html>
